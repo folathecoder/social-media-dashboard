@@ -93,10 +93,14 @@ h3, p {
   border-radius: 100%;
   -webkit-box-shadow: 0rem 0rem 0.13333rem #1e202a;
           box-shadow: 0rem 0rem 0.13333rem #1e202a;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .toggle__active {
   -webkit-transform: translateX(1.33333rem);
           transform: translateX(1.33333rem);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */

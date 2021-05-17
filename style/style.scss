@@ -161,10 +161,12 @@ h3, p {
         height: rem(16);
         border-radius: 100%;
         box-shadow: rem(0) rem(0) rem(2) $color-bg;
+        transition: all 0.5s ease-in-out;
 
     }
 }
 
 .toggle__active {
     transform: translateX(rem(20));
+    transition: all 0.5s ease-in-out;
 }
