@@ -45,25 +45,32 @@ $color-instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
 $color-youtube: hsl(348, 97%, 39%);
 
 // Default Dark Theme Color
-$color-bg: hsl(230, 17%, 14%);
-$color-bg-top: hsl(232, 19%, 15%);
-$color-bg-card: hsl(228, 28%, 20%);
-$color-text-card: hsl(228, 34%, 66%);
-$color-text: hsl(0, 0%, 100%);
+    $color-bg: hsl(230, 17%, 14%);
+    $color-bg-top: hsl(232, 19%, 15%);
+    $color-bg-card: hsl(228, 28%, 20%);
+    $color-text-card: hsl(228, 34%, 66%);
+    $color-text: hsl(0, 0%, 100%);
 
-// // Default Light Theme Color
-// $color-bg: hsl(0, 0%, 100%);
-// $color-bg-top: hsl(225, 100%, 98%);
-// $color-bg-card:  hsl(227, 47%, 96%);
-// $color-text-card: hsl(228, 12%, 44%);
-// $color-text: hsl(230, 17%, 14%);
+
+// Default Light Theme Color
+// .light-mode {
+//     $color-bg: hsl(0, 0%, 100%);
+//     $color-bg-top: hsl(225, 100%, 98%);
+//     $color-bg-card:  hsl(227, 47%, 96%);
+//     $color-text-card: hsl(228, 12%, 44%);
+//     $color-text: hsl(230, 17%, 14%);
+// }
+
 
 //* ========== Font Weights
 $weight-regular: 400;
 $weight-bold: 700;
 
 //* ========== Font Family
-$font-main: 'Inter', sans-serif;;
+$font-main: 'Inter', sans-serif;
+
+//* ========= Max Width
+$width-max: rem(1100);
 
 //! CSS BASE RESET
 * {
@@ -121,27 +128,43 @@ h3, p {
 
 .header {
     max-width: 100%;
+    min-height: rem(230);
     background-color: $color-bg-top;
-    margin: rem(0) auto;
+    border-radius: rem(0) rem(0) rem(50) rem(50);
 
     &__container {
-        max-width: rem(1100);
+        max-width: $width-max;
         min-height: rem(75);
+        margin: rem(0) auto;
         display: flex;
         flex-direction: column;
         padding: rem(20);
+
+        @include media-query(desktop) {
+            flex-direction: row;
+        }
     }
 
     &__title {
+        flex: 1;
         min-height: rem(75);
         border-bottom: rem(1) solid darken($color-text-card, $amount: 90);
+
+        @include media-query(desktop) {
+            border-bottom: none;
+        }
     }
 
     &__theme {
+        flex: 1;
         min-height: rem(45);
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include media-query(desktop) {
+            border-bottom: none;
+            justify-content: flex-end;
+        }
     }
 }
 
@@ -154,6 +177,9 @@ h3, p {
     border-color: none;
     padding: rem(3);
     box-shadow: inset rem(0) rem(0) rem(7) darken($color-accent-pry, $amount: 15);
+    @include media-query(desktop) {
+        margin-left: rem(15);
+    }
 
     &-inner {
         background: $color-bg;
@@ -167,6 +193,34 @@ h3, p {
 }
 
 .toggle__active {
-    transform: translateX(rem(20));
+    transform: translateX(rem(17));
     transition: all 0.5s ease-in-out;
 }
+
+//* ========== Follower Cards
+
+.followers {
+    max-width: 100%;
+    min-height: rem(100);
+    background: transparent;
+    transform: translateY(rem(-80));
+
+    &__container {
+        max-width: $width-max;
+        margin: rem(0) auto;
+        // background-color: blue;
+        padding: rem(20);
+        display: grid;
+        gap: rem(20);
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-auto-rows: rem(200);
+    }
+}
+
+.follower {
+    background-color: $color-bg-card;
+    border-top: rem(3) solid red;
+    border-radius: rem(5);
+    box-shadow: rem(0) rem(0) rem(2) $color-bg-card;
+}
+
