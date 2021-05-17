@@ -1,0 +1,170 @@
+//* Convert pixel to rem automatically
+@function rem($size) {
+    $remSize: $size / 15;
+    @return #{$remSize}rem;
+}
+//*Media queries: Mixins
+@mixin media-query ($size) {
+    @if $size == desktop {
+        @media screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+    @else if $size == tablet {
+        @media screen and (min-width: 992px) {
+            @content;
+        }
+    } 
+    @else if $size == tablet-mini {
+        @media screen and (min-width: 786px) {
+            @content;
+        }
+    } 
+    @else if $size == large-mobile {
+        @media screen and (min-width: 602px) {
+            @content;
+        }
+    } 
+    @else if $size == mobile {
+        @media screen and (min-width: 300px) {
+            @content;
+        }
+    } 
+}
+
+//* ========== Root Colors
+
+// Primary Accent Colors
+$color-accent-pry: hsl(163, 72%, 41%);
+$color-accent-sec: hsl(356, 69%, 56%);
+
+// Social Media Icon Colors
+$color-facebook: hsl(208, 92%, 53%);
+$color-twitter: hsl(203, 89%, 53%);
+$color-instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+$color-youtube: hsl(348, 97%, 39%);
+
+// Default Dark Theme Color
+$color-bg: hsl(230, 17%, 14%);
+$color-bg-top: hsl(232, 19%, 15%);
+$color-bg-card: hsl(228, 28%, 20%);
+$color-text-card: hsl(228, 34%, 66%);
+$color-text: hsl(0, 0%, 100%);
+
+// // Default Light Theme Color
+// $color-bg: hsl(0, 0%, 100%);
+// $color-bg-top: hsl(225, 100%, 98%);
+// $color-bg-card:  hsl(227, 47%, 96%);
+// $color-text-card: hsl(228, 12%, 44%);
+// $color-text: hsl(230, 17%, 14%);
+
+//* ========== Font Weights
+$weight-regular: 400;
+$weight-bold: 700;
+
+//* ========== Font Family
+$font-main: 'Inter', sans-serif;;
+
+//! CSS BASE RESET
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//* Set core root defaults
+html:focus-within {
+    scroll-behavior: smooth;
+}
+img {
+    display: block;
+    width: 100%;
+}
+body {
+    background: $color-bg;
+    max-width: 100%;
+    min-height: 100vh;
+    // padding: rem(20);
+    font-family: $font-main;
+    font-size: rem(14);
+    font-weight: $weight-regular;
+}
+// .sr-only {
+//     border: 0 !important;
+//     clip: rect(1px, 1px, 1px, 1px) !important;
+//     -webkit-clip-path: inset(50%) !important;
+//             clip-path: inset(50%) !important;
+//     height: 1px !important;
+//     margin: -1px !important;
+//     overflow: hidden !important;
+//     padding: 0 !important;
+//     position: absolute !important;
+//     width: 1px !important;
+//     white-space: nowrap !important;
+//   }
+
+//* ========== Typography
+h1 {
+    color: $color-text;
+    font-size: rem(22);
+    line-height: rem(34);
+    font-weight: $weight-bold;
+}
+h3, p {
+    color: $color-text-card;
+    font-size: rem(13);
+    line-height: rem(20);
+    font-weight: $weight-bold;
+}
+
+//* ========= Section Header 
+
+.header {
+    max-width: 100%;
+    background-color: $color-bg-top;
+    margin: rem(0) auto;
+
+    &__container {
+        max-width: rem(1100);
+        min-height: rem(75);
+        display: flex;
+        flex-direction: column;
+        padding: rem(20);
+    }
+
+    &__title {
+        min-height: rem(75);
+        border-bottom: rem(1) solid darken($color-text-card, $amount: 90);
+    }
+
+    &__theme {
+        min-height: rem(45);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.toggle__btn {
+    background: $color-accent-pry;
+    min-width: rem(40);
+    min-height: rem(20);
+    border-radius: rem(25);
+    border: none;
+    border-color: none;
+    padding: rem(3);
+    box-shadow: inset rem(0) rem(0) rem(7) darken($color-accent-pry, $amount: 15);
+
+    &-inner {
+        background: $color-bg;
+        width: rem(16);
+        height: rem(16);
+        border-radius: 100%;
+        box-shadow: rem(0) rem(0) rem(2) $color-bg;
+
+    }
+}
+
+.toggle__active {
+    transform: translateX(rem(20));
+}
