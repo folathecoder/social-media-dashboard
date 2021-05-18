@@ -16,10 +16,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
 </head>
 
-<body class="dark-mode">
-  
+<body class="dark-theme">
+
   <main>
     <section class="header">
       <div class="header__container">
@@ -28,7 +31,9 @@
           <h3>Total Followers: 23,004</h3>
         </div>
         <div class="header__theme">
-          <div class="theme-mode"><p>Dark Mode</p></div>
+          <div class="theme-mode">
+            <p>Dark Mode</p>
+          </div>
           <div class="theme-toggle">
             <button class="toggle__btn">
               <div class="toggle__btn-inner">
@@ -41,20 +46,262 @@
 
     <section class="followers">
       <div class="followers__container">
-        <div class="follower">
-          <div class="follower__username">
-            <p><span>GOD</span> @nathanf</p>
+
+        <div class="follower card1 facebook">
+          <div class="follower__username facebook">
+            <div><i class="fab fa-facebook-square"></i></div>
+            <div>
+              <p>@nathanf</p>
+            </div>
           </div>
           <div class="follower__count">
-            <p><span>1987</span>followers</p>
+            <p class="follower__count-text">1987</p>
+            <p class="follower__count-subtext">followers</p>
           </div>
-          <div class="follower__gain"></div>
+          <div class="follower__gain rise">
+            <div><i class="fas fa-sort-up"></i></div>
+            <div>
+              <p class="rise">12 Today</p>
+            </div>
+          </div>
         </div>
-        <div class="follower">FOLLOWER</div>
-        <div class="follower">FOLLOWER</div>
-        <div class="follower">FOLLOWER</div>
+
+
+
+        <div class="follower card2 twitter">
+          <div class="follower__username twitter">
+            <div><i class="fab fa-twitter"></i></div>
+            <div>
+              <p>@nathanf</p>
+            </div>
+          </div>
+          <div class="follower__count">
+            <p class="follower__count-text">1044</p>
+            <p class="follower__count-subtext">followers</p>
+          </div>
+          <div class="follower__gain rise">
+            <div><i class="fas fa-sort-up"></i></div>
+            <div>
+              <p class="rise">99 Today</p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="follower card3 instagram">
+          <div class="follower__username">
+            <div><i class="fab fa-instagram"></i></div>
+            <div>
+              <p>@realnathanf</p>
+            </div>
+          </div>
+          <div class="follower__count">
+            <p class="follower__count-text">11k</p>
+            <p class="follower__count-subtext">followers</p>
+          </div>
+          <div class="follower__gain rise">
+            <div><i class="fas fa-sort-up"></i></div>
+            <div>
+              <p class="rise">1099 Today</p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="follower card4 youtube">
+          <div class="follower__username youtube">
+            <div><i class="fab fa-youtube"></i></div>
+            <div>
+              <p>Nathan F.</p>
+            </div>
+          </div>
+          <div class="follower__count">
+            <p class="follower__count-text">8239</p>
+            <p class="follower__count-subtext">subscribers</p>
+          </div>
+          <div class="follower__gain fall">
+            <div><i class="fas fa-sort-down"></i></div>
+            <div>
+              <p class="fall">144 Today</p>
+            </div>
+          </div>
+        </div>
       </div>
 
+    </section>
+
+    <section class="overview">
+      <div class="overview__container">
+        <div class="overview__title">
+          <h2>Overview - Today</h2>
+        </div>
+        <div class="overview__contain">
+          <div class="stat card5">
+            <div class="stat__one">
+              <div>
+                <p>Page Views</p>
+              </div>
+              <div class="facebook"><i class="fab fa-facebook-square"></i></div>
+            </div>
+
+            <div class="stat__one stat__two rise">
+              <div class="stat__number">
+                <p>87</p>
+              </div>
+              <div class="follower__gain stat__gain">
+                <div><i class="fas fa-sort-up"></i></div>
+                <div>
+                  <p class="rise">3%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="stat card6">
+            <div class="stat__one">
+              <div>
+                <p>Likes</p>
+              </div>
+              <div class="facebook"><i class="fab fa-facebook-square"></i></div>
+            </div>
+
+            <div class="stat__one stat__two rise">
+              <div class="stat__number">
+                <p>52</p>
+              </div>
+              <div class="follower__gain stat__gain">
+                <div class="fall"><i class="fas fa-sort-up"></i></div>
+                <div>
+                  <p class="fall">2%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="stat card7">
+            <div class="stat__one">
+              <div>
+                <p>Like</p>
+              </div>
+              <div><i class="fab fa-instagram"></i></div>
+            </div>
+
+            <div class="stat__one stat__two rise">
+              <div class="stat__number">
+                <p>5462</p>
+              </div>
+              <div class="follower__gain stat__gain">
+                <div><i class="fas fa-sort-up"></i></div>
+                <div>
+                  <p class="rise">2257%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="stat card8">
+            <div class="stat__one">
+              <div>
+                <p>Profile Views</p>
+              </div>
+              <div><i class="fab fa-instagram"></i></div>
+            </div>
+
+            <div class="stat__one stat__two rise">
+              <div class="stat__number">
+                <p>52k</p>
+              </div>
+              <div class="follower__gain stat__gain">
+                <div><i class="fas fa-sort-up"></i></div>
+                <div>
+                  <p class="rise">1375%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="stat card9">
+            <div class="stat__one">
+              <div>
+                <p>Retweets</p>
+              </div>
+              <div class="twitter"><i class="fab fa-twitter"></i></div>
+            </div>
+
+            <div class="stat__one stat__two rise">
+              <div class="stat__number">
+                <p>117</p>
+              </div>
+              <div class="follower__gain stat__gain">
+                <div><i class="fas fa-sort-up"></i></div>
+                <div>
+                  <p class="rise">303%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="stat card10">
+            <div class="stat__one">
+              <div>
+                <p>Likes</p>
+              </div>
+              <div class="twitter"><i class="fab fa-twitter"></i></div>
+            </div>
+
+            <div class="stat__one stat__two rise">
+              <div class="stat__number">
+                <p>507</p>
+              </div>
+              <div class="follower__gain stat__gain">
+                <div><i class="fas fa-sort-up"></i></div>
+                <div>
+                  <p class="rise">553%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="stat card11">
+            <div class="stat__one">
+              <div>
+                <p>Likes</p>
+              </div>
+              <div class="youtube"><i class="fab fa-youtube"></i></div>
+            </div>
+
+            <div class="stat__one stat__two rise">
+              <div class="stat__number">
+                <p>107</p>
+              </div>
+              <div class="follower__gain stat__gain">
+                <div class="fall"><i class="fas fa-sort-down"></i></div>
+                <div>
+                  <p class="fall">19%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="stat card12">
+            <div class="stat__one">
+              <div>
+                <p>Total Views</p>
+              </div>
+              <div class="youtube"><i class="fab fa-youtube"></i></div>
+            </div>
+
+            <div class="stat__one stat__two rise">
+              <div class="stat__number">
+                <p>1407</p>
+              </div>
+              <div class="follower__gain stat__gain">
+                <div class="fall"><i class="fas fa-sort-down"></i></div>
+                <div>
+                  <p class="fall">12%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
