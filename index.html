@@ -4,30 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- MAIN CSS STYLESHEET -->
   <link rel="stylesheet" href="style/style.css">
 
   <!-- THEME COLOR: FOR CHROME MOBILE BROWSERS -->
-  <meta  class="toolBarColor" name="theme-color" content="#1e202a" />
+  <meta class="toolBarColor" name="theme-color" content="#1e202a" />
 
+  <!-- SEO DATA -->
   <title>Frontend Mentor | Social Media Dashboard</title>
   <meta name="description"
     content="This is a frontendmentor coding challenge. The goal is create a social media dashboard with theme mode switch and localStorage functionality.">
 
+  <!-- GOOGLE FONT -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
+  <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
     integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-
 </head>
 
 <body class="dark-theme">
 
   <main>
-    <section class="header">
+
+    <section class="header">  <!--START OF HEADER SECTION--> 
       <div class="header__container">
         <div class="header__title">
           <h1>Social Media Dashboard</h1>
@@ -37,20 +41,20 @@
           <div class="theme-mode">
             <p>Dark Mode</p>
           </div>
-          <div class="theme-toggle">
+          <div class="theme-toggle"> <!--START OF THEME TOGGLE--> 
             <button class="toggle__btn" aria-label="theme switch">
               <div class="toggle__btn-inner">
               </div>
             </button>
-          </div>
+          </div>  <!--END OF THEME TOGGLE--> 
         </div>
       </div>
-    </section>
-
-    <section class="followers">
+    </section>    <!--END OF HEADER SECTION--> 
+    <!--====================================================================--> 
+    <section class="followers">       <!--START OF FOLLOWERS SECTION--> 
       <div class="followers__container">
 
-        <div class="follower card1 facebook">
+        <div class="follower card1 facebook">     <!--START OF FOLLOWER CARD 1 --> 
           <div class="follower__username facebook">
             <div><i class="fab fa-facebook-square"></i></div>
             <div>
@@ -67,11 +71,9 @@
               <p class="rise">12 Today</p>
             </div>
           </div>
-        </div>
+        </div>     <!--END OF FOLLOWER CARD 1 --> 
 
-
-
-        <div class="follower card2 twitter">
+        <div class="follower card2 twitter">     <!--START OF FOLLOWER CARD 2 --> 
           <div class="follower__username twitter">
             <div><i class="fab fa-twitter"></i></div>
             <div>
@@ -88,11 +90,9 @@
               <p class="rise">99 Today</p>
             </div>
           </div>
-        </div>
+        </div>     <!--END OF FOLLOWER CARD 2 --> 
 
-
-
-        <div class="follower card3 instagram">
+        <div class="follower card3 instagram">      <!--START OF FOLLOWER CARD 3 --> 
           <div class="follower__username">
             <div><i class="fab fa-instagram"></i></div>
             <div>
@@ -109,11 +109,9 @@
               <p class="rise">1099 Today</p>
             </div>
           </div>
-        </div>
+        </div>     <!--END OF FOLLOWER CARD 3 --> 
 
-
-
-        <div class="follower card4 youtube">
+        <div class="follower card4 youtube">     <!--START OF FOLLOWER CARD 4 --> 
           <div class="follower__username youtube">
             <div><i class="fab fa-youtube"></i></div>
             <div>
@@ -131,24 +129,24 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>     <!--START OF FOLLOWER CARD 4 --> 
 
-    </section>
-
-    <section class="overview">
+    </section>         <!--END OF FOLLOWERS SECTION--> 
+    <!--====================================================================--> 
+    <section class="overview">         <!--START OF OVERVIEW SECTION--> 
       <div class="overview__container">
         <div class="overview__title">
           <h2>Overview - Today</h2>
         </div>
         <div class="overview__contain">
-          <div class="stat card5">
+
+          <div class="stat card5">         <!--START OF OVERVIEW CARD 5--> 
             <div class="stat__one">
               <div>
                 <p>Page Views</p>
               </div>
               <div class="facebook"><i class="fab fa-facebook-square"></i></div>
             </div>
-
             <div class="stat__one stat__two rise">
               <div class="stat__number">
                 <p>87</p>
@@ -160,17 +158,16 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div>         <!--END OF OVERVIEW CARD 5--> 
 
 
-          <div class="stat card6">
+          <div class="stat card6">         <!--START OF OVERVIEW CARD 6--> 
             <div class="stat__one">
               <div>
                 <p>Likes</p>
               </div>
               <div class="facebook"><i class="fab fa-facebook-square"></i></div>
             </div>
-
             <div class="stat__one stat__two rise">
               <div class="stat__number">
                 <p>52</p>
@@ -182,15 +179,15 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="stat card7">
+          </div>         <!--START OF OVERVIEW CARD 6-->
+
+          <div class="stat card7">         <!--START OF OVERVIEW CARD 7--> 
             <div class="stat__one">
               <div>
                 <p>Like</p>
               </div>
               <div class="instagram"><i class="fab fa-instagram"></i></div>
             </div>
-
             <div class="stat__one stat__two rise">
               <div class="stat__number">
                 <p>5462</p>
@@ -202,15 +199,15 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="stat card8">
+          </div>         <!--END OF OVERVIEW CARD 7-->
+
+          <div class="stat card8">         <!--START OF OVERVIEW CARD 8--> 
             <div class="stat__one">
               <div>
                 <p>Profile Views</p>
               </div>
               <div class="instagram"><i class="fab fa-instagram"></i></div>
             </div>
-
             <div class="stat__one stat__two rise">
               <div class="stat__number">
                 <p>52k</p>
@@ -222,15 +219,15 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="stat card9">
+          </div>         <!--END OF OVERVIEW CARD 8--> 
+
+          <div class="stat card9">         <!--START OF OVERVIEW CARD 9--> 
             <div class="stat__one">
               <div>
                 <p>Retweets</p>
               </div>
               <div class="twitter"><i class="fab fa-twitter"></i></div>
             </div>
-
             <div class="stat__one stat__two rise">
               <div class="stat__number">
                 <p>117</p>
@@ -242,15 +239,15 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="stat card10">
+          </div>         <!--END OF OVERVIEW CARD 9-->
+
+          <div class="stat card10">         <!--START OF OVERVIEW CARD 10--> 
             <div class="stat__one">
               <div>
                 <p>Likes</p>
               </div>
               <div class="twitter"><i class="fab fa-twitter"></i></div>
             </div>
-
             <div class="stat__one stat__two rise">
               <div class="stat__number">
                 <p>507</p>
@@ -262,8 +259,9 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="stat card11">
+          </div>         <!--START OF OVERVIEW CARD 10-->
+
+          <div class="stat card11">         <!--START OF OVERVIEW CARD 11--> 
             <div class="stat__one">
               <div>
                 <p>Likes</p>
@@ -282,8 +280,9 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="stat card12">
+          </div>         <!--END OF OVERVIEW CARD 11-->
+
+          <div class="stat card12">         <!--START OF OVERVIEW CARD 12--> 
             <div class="stat__one">
               <div>
                 <p>Total Views</p>
@@ -302,11 +301,12 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div>         <!--END OF OVERVIEW CARD 12--> 
         </div>
       </div>
-    </section>
+    </section>         <!--END OF OVERVIEW SECTION--> 
   </main>
+  
   <script src="toggle.js"></script>
 </body>
 

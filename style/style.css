@@ -186,6 +186,7 @@ h3, p {
       -ms-flex: 1;
           flex: 1;
   min-height: 5rem;
+  border-bottom: 0.13333rem solid var(--color-bg-card);
 }
 
 @media screen and (min-width: 602px) {
