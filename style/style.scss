@@ -219,6 +219,7 @@ h3, p {
     border: none;
     border-color: none;
     padding: rem(3);
+    cursor: pointer;
 
     @include media-query(large-mobile) {
         margin-left: rem(15);
@@ -329,11 +330,9 @@ h3, p {
 //* Social Media Accent Colors 
 .facebook {
     color: var(--color-facebook);
-    border-color: var(--color-facebook);
 }
 .twitter {
     color: var(--color-twitter);
-    border-color: var(--color-twitter);
 }
 .instagram {
     background-image: var(--color-instagram);
@@ -344,16 +343,35 @@ h3, p {
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
 }
-.instagram-border-top {
+.youtube {
+    color: var(--color-youtube);
+}
+
+//* Border top
+.border-top-instagram
+ {
     width: 100%;
     height:rem(2);
     border-radius: rem(50) rem(50) rem(0) rem(0);
     transform: translateY(rem(-1));
     background-image: var(--color-instagram);
 }
-.youtube {
-    color: var(--color-youtube);
-    border-color: var(--color-youtube);
+
+.border-top-facebook,
+.border-top-twitter,
+.border-top-youtube
+ {
+    width: 100%;
+    height:rem(2);
+    border-radius: rem(50) rem(50) rem(0) rem(0);
+    transform: translateY(rem(-1));
+    background-color: var(--color-facebook);
+}
+.border-top-twitter {
+    background-color: var(--color-twitter);
+}
+.border-top-youtube {
+    background-color: var(--color-youtube);
 }
 
 //* Icon Up & Down Colors

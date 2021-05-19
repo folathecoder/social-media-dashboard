@@ -229,6 +229,7 @@ h3, p {
   border: none;
   border-color: none;
   padding: 0.2rem;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 602px) {
@@ -369,12 +370,10 @@ h3, p {
 
 .facebook {
   color: var(--color-facebook);
-  border-color: var(--color-facebook);
 }
 
 .twitter {
   color: var(--color-twitter);
-  border-color: var(--color-twitter);
 }
 
 .instagram {
@@ -387,7 +386,11 @@ h3, p {
   -moz-text-fill-color: transparent;
 }
 
-.instagram-border-top {
+.youtube {
+  color: var(--color-youtube);
+}
+
+.border-top-instagram {
   width: 100%;
   height: 0.13333rem;
   border-radius: 3.33333rem 3.33333rem 0rem 0rem;
@@ -396,9 +399,23 @@ h3, p {
   background-image: var(--color-instagram);
 }
 
-.youtube {
-  color: var(--color-youtube);
-  border-color: var(--color-youtube);
+.border-top-facebook,
+.border-top-twitter,
+.border-top-youtube {
+  width: 100%;
+  height: 0.13333rem;
+  border-radius: 3.33333rem 3.33333rem 0rem 0rem;
+  -webkit-transform: translateY(-0.06667rem);
+          transform: translateY(-0.06667rem);
+  background-color: var(--color-facebook);
+}
+
+.border-top-twitter {
+  background-color: var(--color-twitter);
+}
+
+.border-top-youtube {
+  background-color: var(--color-youtube);
 }
 
 .fall {
