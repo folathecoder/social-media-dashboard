@@ -370,7 +370,7 @@ h3, p {
     transform: translateY(rem(-80));
     @include media-query(large-mobile) {
         transform: translateY(rem(-120));
-    }
+    } 
 
     &__container {
         max-width: $width-max;
