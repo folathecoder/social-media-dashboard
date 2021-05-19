@@ -382,6 +382,11 @@ h3, p {
   background-repeat: repeat;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  padding-right: 0.66667rem;
+}
+
+.instagram-initial {
+  padding-right: 0rem;
 }
 
 .youtube {

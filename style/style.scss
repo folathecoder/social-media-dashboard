@@ -340,6 +340,12 @@ h3, p {
     background-repeat: repeat;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding-right: rem(10);
+
+    &-initial {
+        padding-right: rem(0);
+    }
+
 }
 .youtube {
     color: var(--color-youtube);
