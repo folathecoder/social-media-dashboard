@@ -3,6 +3,7 @@
     $remSize: $size / 15;
     @return #{$remSize}rem;
 }
+
 //*Media queries: Mixins
 @mixin media-query ($size) {
     @if $size == desktop {
@@ -10,16 +11,16 @@
             @content;
         }
     }
-    @else if $size == tablet {
-        @media screen and (min-width: 992px) {
-            @content;
-        }
-    } 
-    @else if $size == tablet-mini {
-        @media screen and (min-width: 786px) {
-            @content;
-        }
-    } 
+    // @else if $size == tablet {
+    //     @media screen and (min-width: 992px) {
+    //         @content;
+    //     }
+    // } 
+    // @else if $size == tablet-mini {
+    //     @media screen and (min-width: 786px) {
+    //         @content;
+    //     }
+    // } 
     @else if $size == large-mobile {
         @media screen and (min-width: 602px) {
             @content;
@@ -41,13 +42,14 @@
     // Social Media Icon Colors
     --color-facebook: hsl(208, 92%, 53%);
     --color-twitter: hsl(203, 89%, 53%);
-    --color-instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+    --color-instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
     --color-youtube: hsl(348, 97%, 39%);
 
     // Default Dark Theme Color
     --color-dark-bg: hsl(230, 17%, 14%);
     --color-dark-bg-top: hsl(232, 19%, 15%);
     --color-dark-bg-card: hsl(228, 28%, 20%);
+    --color-dark-bg-card-hover: hsla(0, 0%, 100%, 0.123);
     --color-dark-text-card: hsl(228, 34%, 66%);
     --color-dark-text: hsl(0, 0%, 100%);
 
@@ -55,6 +57,7 @@
     --color-light-bg: hsl(0, 0%, 100%);
     --color-light-bg-top: hsl(225, 100%, 98%);
     --color-light-bg-card:  hsl(227, 47%, 96%);
+    --color-light-bg-card-hover: hsla(0, 0%, 0%, 0.11);
     --color-light-text-card: hsl(228, 12%, 44%);
     --color-light-text: hsl(230, 17%, 14%);
 }
@@ -63,17 +66,35 @@
     --color-bg: var(--color-dark-bg);
     --color-bg-top: var(--color-dark-bg-top);
     --color-bg-card: var(--color-dark-bg-card);
+    --color-bg-card-hover: var(--color-dark-bg-card-hover);
     --color-text-card: var(--color-dark-text-card);
     --color-text: var(--color-dark-text);
+    --color-toggle-1: hsl(210, 78%, 56%);
+    --color-toggle-2: hsl(146, 68%, 55%);
 }
 
 .light-theme {
     --color-bg: var(--color-light-bg);
     --color-bg-top: var(--color-light-bg-top);
     --color-bg-card: var(--color-light-bg-card);
+    --color-bg-card-hover: var(--color-light-bg-card-hover);
     --color-text-card: var(--color-light-text-card);
     --color-text: var(--color-light-text);
+    --color-toggle-1: hsl(230, 22%, 74%);
+    --color-toggle-2: hsl(230, 22%, 74%);
 }
+
+//* ========== Font Weights
+$weight-regular: 400;
+$weight-bold: 700;
+
+//* ========== Font Family
+$font-main: 'Inter', sans-serif;
+
+//* ========= Max Width
+$width-max: rem(1100);
+
+//* Card Animation
 .card1 {
     transition: all 0.3s ease-in-out;
 }
@@ -110,15 +131,6 @@
 .card12 {
     transition: all 3.6s ease-in-out;
 }
-//* ========== Font Weights
-$weight-regular: 400;
-$weight-bold: 700;
-
-//* ========== Font Family
-$font-main: 'Inter', sans-serif;
-
-//* ========= Max Width
-$width-max: rem(1100);
 
 //! CSS BASE RESET
 * {
@@ -139,24 +151,10 @@ body {
     background: var(--color-bg);
     max-width: 100%;
     min-height: 100vh;
-    // padding: rem(20);
     font-family: $font-main;
     font-size: rem(14);
     font-weight: $weight-regular;
 }
-// .sr-only {
-//     border: 0 !important;
-//     clip: rect(1px, 1px, 1px, 1px) !important;
-//     -webkit-clip-path: inset(50%) !important;
-//             clip-path: inset(50%) !important;
-//     height: 1px !important;
-//     margin: -1px !important;
-//     overflow: hidden !important;
-//     padding: 0 !important;
-//     position: absolute !important;
-//     width: 1px !important;
-//     white-space: nowrap !important;
-//   }
 
 //* ========== Typography
 h1, h2 {
@@ -164,6 +162,10 @@ h1, h2 {
     font-size: rem(22);
     line-height: rem(34);
     font-weight: $weight-bold;
+    @include media-query(desktop) {
+        font-size: rem(25);
+        line-height: rem(37);
+    }
 }
 
 h2 {
@@ -192,7 +194,7 @@ h3, p {
         flex-direction: column;
         padding: rem(20);
 
-        @include media-query(desktop) {
+        @include media-query(large-mobile) {
             flex-direction: row;
         }
     }
@@ -200,9 +202,8 @@ h3, p {
     &__title {
         flex: 1;
         min-height: rem(75);
-        // border-bottom: rem(1) solid darken(red, $amount: 90);
 
-        @include media-query(desktop) {
+        @include media-query(large-mobile) {
             border-bottom: none;
         }
     }
@@ -213,7 +214,7 @@ h3, p {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        @include media-query(desktop) {
+        @include media-query(large-mobile) {
             border-bottom: none;
             justify-content: flex-end;
         }
@@ -221,16 +222,21 @@ h3, p {
 }
 
 .toggle__btn {
-    background: var(--color-accent-pry);
+    background: linear-gradient(to right, var(--color-toggle-1), var(--color-toggle-2));
     min-width: rem(40);
     min-height: rem(20);
     border-radius: rem(25);
     border: none;
     border-color: none;
     padding: rem(3);
-    // box-shadow: inset rem(0) rem(0) rem(7) darken(var(--color-accent-pry), $amount: 15);
-    @include media-query(desktop) {
+
+    @include media-query(large-mobile) {
         margin-left: rem(15);
+    }
+
+    &:hover {
+        transition: all 1s ease-in-out;
+        background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
     }
 
     &-inner {
@@ -240,7 +246,6 @@ h3, p {
         border-radius: 100%;
         box-shadow: rem(0) rem(0) rem(2) var(--color-bg);
         transition: all 0.5s ease-in-out;
-
     }
 }
 
@@ -255,12 +260,11 @@ h3, p {
     max-width: 100%;
     min-height: rem(100);
     background: transparent;
-    transform: translateY(rem(-80));
+    transform: translateY(rem(-120));
 
     &__container {
         max-width: $width-max;
         margin: rem(0) auto;
-        // background-color: blue;
         padding: rem(20);
         display: grid;
         gap: rem(20);
@@ -271,21 +275,20 @@ h3, p {
 
 .follower {
     background-color: var(--color-bg-card);
-    border-top: rem(3) solid red;
     border-radius: rem(5);
-    box-shadow: rem(0) rem(0) rem(2) var(--color-bg-card);
+    border-top: rem(2) solid;
+    box-shadow: rem(0) rem(0) rem(2) var(--color-bg-card-hover);
     display: flex;
     flex-direction: column;
     align-items: center;
-    // justify-content: center;
 
-    // & > * {
-    //     // flex: 1;
-    //     // justify-self: center;
-    // }
+    &:hover {
+        background-color: var(--color-bg-card-hover);
+        transition: 0.2s all ease-in-out;
+        transform: translateY(rem(-10));
+    }
+
     &__username {
-        // background-color: red;
-        // min-height: rem(30);
         display: flex;
         margin: rem(24) rem(0) rem(35) rem(0);
         p {
@@ -301,7 +304,6 @@ h3, p {
         p {
             text-align: center;
             text-transform: uppercase;
-            // font-weight: $weight-regular;
         }
 
         &-text {
@@ -326,12 +328,12 @@ h3, p {
         }
         
         i {
-            padding-right: rem(10);
+            padding-right: rem(4);
         }
     }
 }
 
-
+//* Social Media Accent Colors 
 .facebook {
     color: var(--color-facebook);
     border-color: var(--color-facebook);
@@ -340,15 +342,14 @@ h3, p {
     color: var(--color-twitter);
     border-color: var(--color-twitter);
 }
-.instagram {
-    // color: transparent;
-    color: (--color-instagram);
-    border-color: var(--color-instagram);
-}
-.youtube i {
+// .instagram {
+// }
+.youtube {
     color: var(--color-youtube);
     border-color: var(--color-youtube);
 }
+
+//* Icon Up & Down Colors
 .fall {
     color: var(--color-accent-sec);
 }
@@ -356,26 +357,23 @@ h3, p {
     color: var(--color-accent-pry);
 }
 
-
 //* ========== Overview Section
-
 .overview {
     max-width: 100%;
     min-height: rem(100);
     background: transparent;
-    transform: translateY(rem(-80));
+    transform: translateY(rem(-120));
 
     &__container {
         max-width: $width-max;
         margin: rem(0) auto;
-        // background-color: blue;
         padding: rem(20);
     }
+
     &__contain {
         max-width: 100%;
         min-height: rem(100);
         margin-top: rem(30);
-        // padding: rem(20);
         display: grid;
         gap: rem(15) rem(20);
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -387,13 +385,19 @@ h3, p {
     max-width: 100%;
     background-color: var(--color-bg-card);
     border-radius: rem(5);
-    box-shadow: rem(0) rem(0) rem(2) var(--color-bg-card);
+    box-shadow: rem(0) rem(0) rem(2) var(--color-bg-card-hover);
     display: flex;
     flex-direction: column;
     padding: rem(10) rem(0);
 
+
+    &:hover {
+        background-color: var(--color-bg-card-hover);
+        transition: 0.2s all ease-in-out;
+        transform: translateY(rem(-10));;
+    }
+
     &__one {
-        // background-color: #fff;
         display: flex;
         justify-content: space-between;
         margin: rem(10) rem(0);
@@ -408,9 +412,9 @@ h3, p {
     &__gain {
 
         i {
-            padding-right: rem(2);
+            padding-right: rem(3);
+            font-size: rem(14);
         }
-
     }
 
     &__number p {
