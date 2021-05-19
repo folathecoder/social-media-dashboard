@@ -267,9 +267,9 @@ h3, p {
 }
 
 .follower {
-    background-color: var(--color-bg-card);
+    background-color: var(--color-bg-card) !important; 
     border-radius: rem(5);
-    border-top: rem(2) solid;
+    border-top: rem(2) solid transparent;
     box-shadow: rem(0) rem(0) rem(2) var(--color-bg-card-hover);
     display: flex;
     flex-direction: column;
@@ -336,8 +336,20 @@ h3, p {
     border-color: var(--color-twitter);
 }
 .instagram {
-    color: hsl(329, 70%, 58%);
-    border-color: hsl(329, 70%, 58%);
+    background-image: var(--color-instagram);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+.instagram-border-top {
+    width: 100%;
+    height:rem(2);
+    border-radius: rem(50) rem(50) rem(0) rem(0);
+    transform: translateY(rem(-1));
+    background-image: var(--color-instagram);
 }
 .youtube {
     color: var(--color-youtube);
@@ -392,7 +404,7 @@ h3, p {
     &:hover {
         background-color: var(--color-bg-card-hover);
         transition: 0.2s all ease-in-out;
-        transform: translateY(rem(-10));;
+        transform: translateY(rem(-10));
     }
 
     &__one {
