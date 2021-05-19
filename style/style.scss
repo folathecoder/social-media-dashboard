@@ -336,10 +336,10 @@ h3, p {
 }
 .instagram {
     background-image: var(--color-instagram);
-    // background-size: 100%;
+    background-size: 0%;
     background-repeat: repeat;
     background-clip: text;
-    -webkit-text-fill-color: white;
+    -webkit-text-fill-color: transparent;
     padding-right: rem(10);
 
     &-initial {
