@@ -265,8 +265,15 @@ h3, p {
   max-width: 100%;
   min-height: 6.66667rem;
   background: transparent;
-  -webkit-transform: translateY(-8rem);
-          transform: translateY(-8rem);
+  -webkit-transform: translateY(-5.33333rem);
+          transform: translateY(-5.33333rem);
+}
+
+@media screen and (min-width: 602px) {
+  .followers {
+    -webkit-transform: translateY(-8rem);
+            transform: translateY(-8rem);
+  }
 }
 
 .followers__container {
@@ -370,10 +377,8 @@ h3, p {
 }
 
 .instagram {
-  border-width: 2px;
-  border-style: solid;
-  background-color: var(--color-instagram);
-  z-index: 100;
+  color: #df4996;
+  border-color: #df4996;
 }
 
 .youtube {
@@ -393,8 +398,15 @@ h3, p {
   max-width: 100%;
   min-height: 6.66667rem;
   background: transparent;
-  -webkit-transform: translateY(-8rem);
-          transform: translateY(-8rem);
+  -webkit-transform: translateY(-5.33333rem);
+          transform: translateY(-5.33333rem);
+}
+
+@media screen and (min-width: 602px) {
+  .overview {
+    -webkit-transform: translateY(-8rem);
+            transform: translateY(-8rem);
+  }
 }
 
 .overview__container {

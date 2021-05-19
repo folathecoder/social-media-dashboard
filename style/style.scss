@@ -260,7 +260,10 @@ h3, p {
     max-width: 100%;
     min-height: rem(100);
     background: transparent;
-    transform: translateY(rem(-120));
+    transform: translateY(rem(-80));
+    @include media-query(large-mobile) {
+        transform: translateY(rem(-120));
+    }
 
     &__container {
         max-width: $width-max;
@@ -342,8 +345,10 @@ h3, p {
     color: var(--color-twitter);
     border-color: var(--color-twitter);
 }
-// .instagram {
-// }
+.instagram {
+    color: hsl(329, 70%, 58%);
+    border-color: hsl(329, 70%, 58%);
+}
 .youtube {
     color: var(--color-youtube);
     border-color: var(--color-youtube);
@@ -362,7 +367,10 @@ h3, p {
     max-width: 100%;
     min-height: rem(100);
     background: transparent;
-    transform: translateY(rem(-120));
+    transform: translateY(rem(-80));
+    @include media-query(large-mobile) {
+        transform: translateY(rem(-120));
+    }
 
     &__container {
         max-width: $width-max;
