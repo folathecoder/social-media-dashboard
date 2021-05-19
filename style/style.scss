@@ -338,10 +338,8 @@ h3, p {
     background-image: var(--color-instagram);
     background-size: 100%;
     background-repeat: repeat;
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
 }
 .youtube {
     color: var(--color-youtube);
@@ -418,11 +416,9 @@ h3, p {
     flex-direction: column;
     padding: rem(10) rem(0);
 
-
     &:hover {
         background-color: var(--color-bg-card-hover);
         transition: 0.2s all ease-in-out;
-        transform: translateY(rem(-10));
     }
 
     &__one {
